@@ -1,7 +1,5 @@
 const calcular = document.querySelector('#calcular');
 
-
-
 function imc () {
     const nome = document.querySelector('#nome').value;
     const altura = document.querySelector('#altura').value;
@@ -13,39 +11,34 @@ function imc () {
     } 
 
 
-    
-
-
     const valorimc = (peso / (altura * altura)).toFixed(1);
     let classificacao = valorimc
 
     
-
-
- switch (true) {
+    switch (true) {
 
         case (valorimc < 18.5) :
             classificacao = 'abaixo do ideal';
         break;
 
-        case (valorimc <= 24.9):
-            classificacao = 'peso ideal'
+            case (valorimc <= 24.9):
+                classificacao = 'peso ideal'
             break;
             
-            case (valorimc <= 29.9) :
-                classificacao = 'sobrepeso'
+                case (valorimc <= 29.9) :
+                    classificacao = 'sobrepeso'
                 break;
 
-                case (valorimc <= 34.9) :
-                    classificacao = 'obesidade I'
+                    case (valorimc <= 34.9) :
+                        classificacao = 'obesidade I'
                     break;
 
-                    case (valorimc <= 39.9) :
-                    classificacao = 'obesidade II'
-                    break;
+                        case (valorimc <= 39.9) :
+                            classificacao = 'obesidade II'
+                        break;
 
-        default:
-            classificacao = 'obesidade III';
+                            default:
+                                classificacao = 'obesidade III';
     };
 
 
